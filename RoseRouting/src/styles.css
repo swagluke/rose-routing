@@ -4,4 +4,5 @@
 @import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
 body {
   margin: 0;
+  background: #ddd;
 }

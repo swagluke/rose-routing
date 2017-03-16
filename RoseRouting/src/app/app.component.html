@@ -1,7 +1,9 @@
 <md-toolbar color="primary">
   <span>Rose Routing</span>
+  <span fxFlex></span>
+  <a md-button [routerLink]="['/home']">Home</a>
+  <a md-button [routerLink]="['/signin']">Sign In</a>
 </md-toolbar>
-
-<button [routerLink]="['/home']">Home</button>
-<button [routerLink]="['/signin']">Sign In</button>
-<router-outlet></router-outlet>
+<md-card>
+  <router-outlet></router-outlet>
+</md-card>
