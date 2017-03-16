@@ -23,9 +23,14 @@ export class MoenchComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    var moenchTrigger = window.document.querySelector("#moench-trigger");
+    moenchTrigger.classList.add("active");
+
   }
 
   ngOnDestroy(): void {
+    var moenchTrigger = window.document.querySelector("#moench-trigger");
+    moenchTrigger.classList.remove("active");
     this.routerSubscription.unsubscribe();
   }
 }

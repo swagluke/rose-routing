@@ -1,17 +1,20 @@
 <md-toolbar color="primary">
-  <span>Rose Routing</span>
-  <span fxFlex></span>
-  <a md-button [routerLink]="['/home']">Home</a>
-  <a md-button [mdMenuTriggerFor]="moenchFloorsMenu">Moench</a>
+  <span fxHide.xs>Rose Routing</span>
+  <span fxHide.xs fxFlex></span>
+  <a md-button [routerLink]="['/home']" routerLinkActive="active">Home</a>
+
+  <a id="moench-trigger" md-button [mdMenuTriggerFor]="moenchFloorsMenu">Moench</a>
   <md-menu [overlapTrigger]="false" #moenchFloorsMenu="mdMenu">
-    <button md-menu-item [routerLink]="['/moench','200']">200</button>
-    <button md-menu-item [routerLink]="['/moench','100']">100</button>
-    <button md-menu-item [routerLink]="['/moench','L100']">L100</button>
-    <button md-menu-item [routerLink]="['/moench','L200']">L200</button>
+    <button md-menu-item [routerLink]="['/moench','200']" routerLinkActive="active">200</button>
+    <button md-menu-item [routerLink]="['/moench','100']" routerLinkActive="active">100</button>
+    <button md-menu-item [routerLink]="['/moench','L100']" routerLinkActive="active">L100</button>
+    <button md-menu-item [routerLink]="['/moench','L200']" routerLinkActive="active">L200</button>
   </md-menu>
 
-  <a md-button [routerLink]="['/signin']">Sign In</a>
+  <a md-button [routerLink]="['/signin']" routerLinkActive="active">Sign In</a>
 </md-toolbar>
-<md-card>
-  <router-outlet></router-outlet>
-</md-card>
+<div fxLayoutAligh="center center">
+  <md-card class="container">
+    <router-outlet></router-outlet>
+  </md-card>
+</div>
