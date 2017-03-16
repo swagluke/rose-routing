@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './+home/home.component';
 import { SigninComponent } from './+signin/signin.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SigninComponent } from './+signin/signin.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
