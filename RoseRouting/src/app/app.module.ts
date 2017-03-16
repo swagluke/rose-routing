@@ -9,12 +9,14 @@ import { HomeComponent } from './+home/home.component';
 import { SigninComponent } from './+signin/signin.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '@angular/material';
+import { MoenchComponent } from './+moench/moench.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SigninComponent
+    SigninComponent,
+    MoenchComponent
   ],
   imports: [
     BrowserModule,
