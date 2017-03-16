@@ -11,13 +11,14 @@ export class MoenchComponent implements OnInit, OnDestroy {
 
   private routerSubscription: Subscription;
   message: string;
+  imageUrl: string;
 
   constructor(private route: ActivatedRoute) {
     // Router params DO NOT NEED to unsubscribe later. 
     this.routerSubscription = this.route.params.subscribe( (params: Params) =>{
         var floor = params['floor'];
-        console.log(`The param is ${floor}.`);
         this.message = `Moench ${floor}`;
+        this.imageUrl = `./assets/images/moench${floor}.png`;
     });
   }
 
